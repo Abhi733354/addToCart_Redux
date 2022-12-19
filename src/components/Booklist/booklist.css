@@ -1,0 +1,33 @@
+.flex-box> div {
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+  }
+  .search-box > input{
+    width: 400px;
+    margin: 20px;
+    height: 40px;
+    border: 1px solid black; 
+  }
+  .menu-image{
+    width: 150px;
+    margin-left: 50px;
+  }
+  
+  .image-max-height{
+    max-height:250px;
+    min-height:250px;
+    min-width: 100%;
+  }
+  img.food-image-large {
+    height: 200px;
+    width: 50%;
+  }
+  img.food-image-small {
+    height: 188px;
+    width: 100%;
+  } 
+  section {
+    padding: 30px 0px!important;
+  }

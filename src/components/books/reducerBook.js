@@ -5,12 +5,12 @@ const initialState = {
     bookDetails: {}
 };
 
-export const reducerbook = (state = initialState, action) => {
+export const reducerBook = (state = initialState, action) => {
     const {type, payload} = action;
     switch(type) {
         case Constants.ADD_BOOK_TO_CART: 
         let temp = [...state.bookCart, payload];
-        return {...state, foodCart: temp}
+        return {...state, bookCart: temp}
     case Constants.ADD_BOOK_DETAILS:
         return {...state, bookDetails: payload}
     case Constants.EMPTY_BOOK_FROM_CART:
