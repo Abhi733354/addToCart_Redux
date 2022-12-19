@@ -36,20 +36,10 @@ const Order = () => {
 
         
     }
-  //   useEffect(() => {
-  //     // getdata();
-  //     orderapi();
-  //     if(!loginData.loginDataRedux){
-  //       dispatch(setUrl(window.location.pathname));
-  //       navigate('/login');
-  //     }
-  // }, [loginData.loginDataRedux])
+
   return (
     <>   
-     {/* <div className="col-3"> */}
-    {/* <h4>{orderData.email}</h4>
-    <h4>{orderData.book_name}</h4>
-</div> */}
+
     <div>
 
     <h3>Thanx for your order</h3>
