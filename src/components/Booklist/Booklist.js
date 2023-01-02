@@ -10,11 +10,13 @@ const Booklist = () => {
     const callapi = async () => {
     
         const res = await fetch(`http://localhost:8003/getbooks/`, {
+            
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
             }
         });
+        console.log(res)
     
         const data = await res.json();
         console.log(data);
@@ -25,6 +27,7 @@ const Booklist = () => {
         } else {
             setList(data)
             console.log("get data");
+            console.log(setList(data))
     
         }
     
@@ -70,6 +73,7 @@ const Booklist = () => {
                 <img src={item.image} class="menu-img img-fluid image-max-height" alt=""/>
                 <h4>{item.book_name}</h4>
                 <h5>&#8377;{item.book_price}</h5>
+                <h6> discountedprice &#8377;{item.discountedprice}</h6>
                 </Link>
                     
                     </div>

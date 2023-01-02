@@ -28,17 +28,14 @@ const UserLogin = () => {
     }
 
     const login = async () => {
-        // let tempobj = {};
-        // tempobj.email = email.current.value;
-        // tempobj.password = password.current.value;
-        // if(tempobj.email !=='' && tempobj.password !==''){
         const url = "http://localhost:8003/userlogin"
          await axios.post(url,user)
         .then(res => {
+            console.log(res)
             alert(res.data.message)
             setUser(res.data.user)
             navigate("/booklist")
-            // dispatch(setLogindata(response.data));
+           
             
         
         })

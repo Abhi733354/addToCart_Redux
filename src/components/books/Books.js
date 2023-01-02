@@ -72,9 +72,10 @@
         <div className="col-3">
             <img src= {getuserdata.image}/>
             <h4>{getuserdata.book_name}</h4>
-            <h5>&#8377;{getuserdata.book_price}</h5>
-            {/* <button className="btn btn-sm btn-warning" onClick={()=>navigate("/order")}>OrderNow</button> */}
-            <button className="btn btn-sm btn-warning" onClick={callapi}>OrderNow</button>
+            <h6>&#8377;{getuserdata.book_price}</h6>
+            {/* <h6>&#8377;{getuserdata.discountedprice}</h6> */}
+            <button className="btn btn-sm btn-warning" onClick={()=>navigate("/order")}>OrderNow</button>
+            {/* <button className="btn btn-sm btn-warning" onClick={callapi}>OrderNow</button> */}
 
 
 

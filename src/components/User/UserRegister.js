@@ -10,7 +10,7 @@ const UserRegister = () => {
     const navigate = useNavigate()
 
     const [ user, setUser] = useState({
-        name: "",
+        user_name: "",
         email:"",
         password:"",
         reEnterPassword: ""
@@ -24,13 +24,20 @@ const UserRegister = () => {
         })
     }
 
-    const register = () => {
-        const { name, email, password, reEnterPassword } = user
-        if( name && email && password && (password === reEnterPassword)){
-            axios.post("http://localhost:8003/userregister", user)
+    const register = async() => {
+        const { user_name, email, password, reEnterPassword } = user
+        if( user_name && email && password && (password === reEnterPassword)){
+            const url = "http://localhost:8003/userregister"
+            console.log(url)
+            await axios.post(url,user)
             .then( res => {
+                console.log("Res", res);
                 alert(res.data.message)
                 navigate("/")
+                console.log(res)
+                console.log(user)
+            }).catch(err => {
+                console.log("error", err)
             })
         } else {
             alert("invlid input")
@@ -40,15 +47,15 @@ const UserRegister = () => {
 
     return (
         <div className="register">
-            {console.log("User", user)}
+            {/* {console.log("User", user)} */}
             <h1>User Register</h1>
-            <input type="text" name="name" value={user.name} placeholder="Your Name" onChange={ handleChange }></input>
+            <input type="text" name="user_name" value={user.user_name} placeholder="Your User Name" onChange={ handleChange }></input>
             <input type="text" name="email" value={user.email} placeholder="Your Email" onChange={ handleChange }></input>
             <input type="password" name="password" value={user.password} placeholder="Your Password" onChange={ handleChange }></input>
             <input type="password" name="reEnterPassword" value={user.reEnterPassword} placeholder="Re-enter Password" onChange={ handleChange }></input>
             <div className="button" onClick={register}>Register</div>
             <div>or</div>
-            <div className="button" onClick={() => navigate("/userlogin")}>Login</div>
+            <div className="button" onClick={() => navigate("/")}>Login</div>
         </div>
     )
 }
