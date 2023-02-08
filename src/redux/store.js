@@ -1,9 +1,10 @@
-import { legacy_createStore as createStore } from "redux";
+// import { legacy_createStore as createStore } from "redux";
+import { createStore } from "redux";
 
 import reducers from "./reducer";
 
 const store = createStore(
-    reducers
-);
+    reducers,  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+
 
 export default store;

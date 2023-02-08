@@ -9,6 +9,7 @@ import UserLogin from './components/User/Userlogin';
 import UserRegister from './components/User/UserRegister';
 import Booklist from './components/Booklist/Booklist';
 import Order from './components/orders/Order';
+import Cart from './components/cart/Cart';
 
 
 
@@ -19,7 +20,7 @@ function App() {
       <Routes>
       <Route path="/"  element={<UserLogin/>}/>
       <Route path='/register' element = {<UserRegister/>}/>
-      {/* <Route path='/cart' element = {<Cart/>}/> */}
+      <Route path='/cart' element = {<Cart/>}/>
       <Route path='/order/:id' element = {<Order/>}/>
       <Route path='/book/:id' element = {<Book/>}/>
       <Route path='/booklist' element = {<Booklist/>}/>
