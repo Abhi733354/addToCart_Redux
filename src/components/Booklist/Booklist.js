@@ -53,7 +53,7 @@ const Booklist = () => {
     const addCart = (e) => {
         e.preventDefault();
         dispatch(addBookToCart(list))
-        console.log("bookItem:", list)
+        console.log("list:", list)
         // dispatch(addCount(count))
     }
 
@@ -85,6 +85,7 @@ const Booklist = () => {
   return (
     <div>
           <>
+          {/* <h3>{count}</h3> */}
         <Link to={'/cart'}>
         <button className="btn btn-sm btn-warning">Cart</button>
         </Link>
